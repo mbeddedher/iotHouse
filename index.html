@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+
+  <div id="tempDiv">
+    <span class="iconify" data-icon="fa6-solid:temperature-three-quarters" style="color: #000000;"></span>
+    <h1>Temperature</h1>
+    <p><span class="degree">36</span>&#8451</p>
+    <input type="checkbox" id="tempAuto" name="tempAuto" value="auto">
+    <label for="tempAuto"> Auto</label><br>
+
+    <label for="tempTrigger"> Set Trigger: </label>
+    <input type="range" id="tempTrigger" name="tempTrigger" value="4">
+    <output name="tempOut" for="tempTrigger"></output><br>
+
+    <button type="button">low</button>
+    <button type="button">mid</button>
+    <button type="button">high</button><br>
+
+    <button type="button">On/Off</button>
+  </div>
+
+  <div id="movDiv">
+    <span class="iconify" data-icon="clarity:eye-solid" style="color: #000000;"></span>
+    <h1>Movement</h1>
+    <p><span id="movCount">2</span> detected</p>
+    <input type="checkbox" id="movAuto" name="movAuto" value="auto">
+    <label for="movAuto"> Auto</label><br>
+
+    <button type="button">Living Room</button><br>
+    <button type="button">BedRoom</button><br>
+    <button type="button">Kitchen</button><br>
+    <button type="button">Diactivate</button>
+
+  </div>
+
+  <div id="lightDiv">
+    <span class="iconify" data-icon="ri:lightbulb-fill" style="color: #000000;"></span>
+    <h1>Lightning</h1>
+
+    <p><span id="lumen">3</span> lm</p>
+
+    <input type="checkbox" id="lightAuto" name="lightAuto" value="auto">
+    <label for="lightAuto"> Auto</label><br>
+
+    <label for="lightTrigger"> Set Trigger: </label>
+    <input type="range" id="lightTrigger" name="lightTrigger" value="4">
+
+    <output name="lightOut" for="lightTrigger"></output><br>
+
+    <button type="button">low</button>
+    <button type="button">mid</button>
+    <button type="button">high</button><br>
+
+    <button type="button">On/Off</button>
+  </div>
+
+  <div id="petFootDiv">
+    <span class="iconify" data-icon="mdi:dog" style="color: #545454;"></span>
+    <h1>Pet Food</h1>
+
+    <p>%<span id="foodAmount">35</span></p>
+
+    <input type="checkbox" id="petAuto" name="petAuto" value="auto">
+    <label for="petAuto"> Make <select id="makePerc">  
+    <option value="50">50</option>
+    <option value="100">100</option>
+    </select>, when it is below % <select id="foodPerc">
+    <option value="50">50</option>
+    <option value="100">100</option>
+    </select>
+    </label><br>
+
+
+    <button type="button">More</button><br>
+    <button type="button">Less</button>
+    
+  </div>
+
+  
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>
