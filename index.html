@@ -2,19 +2,22 @@
 <html>
 <head>
   <title>Auto Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
   <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
 
-  <div id="tempDiv">
+<body>
+<div class="container">
+
+  <div class="containerBox">
     <span class="iconify" data-icon="fa6-solid:temperature-three-quarters" style="color: #000000;"></span>
     <h1>Temperature</h1>
     <p><span class="degree">36</span>&#8451</p>
+    <span class="iconify" data-icon="wpf:fan" style="color: #00FF38;"></span>
     <input type="checkbox" id="tempAuto" name="tempAuto" value="auto">
     <label for="tempAuto"> Auto</label><br>
-
     <label for="tempTrigger"> Set Trigger: </label>
     <input type="range" id="tempTrigger" name="tempTrigger" value="4">
     <output name="tempOut" for="tempTrigger"></output><br>
@@ -26,21 +29,17 @@
     <button type="button">On/Off</button>
   </div>
 
-  <div id="movDiv">
+  <div class="containerBox">
     <span class="iconify" data-icon="clarity:eye-solid" style="color: #000000;"></span>
     <h1>Movement</h1>
     <p><span id="movCount">2</span> detected</p>
-    <input type="checkbox" id="movAuto" name="movAuto" value="auto">
-    <label for="movAuto"> Auto</label><br>
-
-    <button type="button">Living Room</button><br>
-    <button type="button">BedRoom</button><br>
-    <button type="button">Kitchen</button><br>
-    <button type="button">Diactivate</button>
+    <span class="iconify" data-icon="bxs:error-alt" style="color: #F4B556;"></span><button type="button" id="livingButton">Living Room</button><br>
+    <span class="iconify" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button" id="bedroomButton">BedRoom</button><br>
+    <span class="iconify" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button" id="kitchenButton">Kitchen</button><br>
+    <button type="button" id="diactButton">Diactivate</button>
 
   </div>
-
-  <div id="lightDiv">
+  <div class="containerBox">
     <span class="iconify" data-icon="ri:lightbulb-fill" style="color: #000000;"></span>
     <h1>Lightning</h1>
 
@@ -61,8 +60,8 @@
     <button type="button">On/Off</button>
   </div>
 
-  <div id="petFootDiv">
-    <span class="iconify" data-icon="mdi:dog" style="color: #545454;"></span>
+  <div class="containerBox">
+    <span class="iconify" data-icon="mdi:dog" style="color: #000000;"></span>
     <h1>Pet Food</h1>
 
     <p>%<span id="foodAmount">35</span></p>
@@ -86,7 +85,7 @@
   
 
 
-
+</div>
 </body>
 
 
