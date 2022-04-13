@@ -1,47 +1,79 @@
+
 * {
   box-sizing: border-box;
 }
 
 body {
+
   background-color: rgb(237, 237, 237);
   font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 850px){
+  .container {
+
+    flex-direction: column;
+  }
 }
 
 h1 {
+
   font-size: 25px;
   display: inline;
   padding-left: 5px;
 }
 
 .iconify.icon{
+
   width: 27px;
   height: 27px;
   margin-top: 10px;
-  
 }
 #fan{
+
   margin-left: 7px;
 }
 
 #degree, #movCount, #lum {
+
   display: inline;
   margin-left: 10px;
 }
 
 .column {
+
+  min-width: 360px;
   background-color: #FFFEEC;
   border-radius: 25px;
-  float: left;
-  width: 40%;
+  width: 80%;
   height: 300px;
+  margin-bottom: 60px;
   padding-inline: 20px;
   padding-block: 10px;
   margin-block: 10px;
   margin-inline: 65px;
 }
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+}
 
-/* Clear floats after the columns */
+
 .row:after {
+
   background-color: #FFFEEC;
   border-radius: 25px;
   content: "";
@@ -50,75 +82,85 @@ h1 {
 }
 
 .triggers{
+
   margin-left: 7%;
 }
 
 .lightButs{
+
   background-color: #64D7D6;
   font-size: 17px;
 }
 .tempButs{
+
   background-color: #FCFF76;
 }
 
 .iconify.arrow{
+
   width: 27px;
   height: 27px;
 }
 
 .lowButton{ 
+
   float: left;
   width: 30%;
   height: 20%;
-  
   border-left: 2px solid #000000;
   border-top:2px solid #000000;
   border-right:1px solid #000000;
+  border-bottom: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 9px 0px 0px 9px;
   margin-left: 5%;
 }
 
 .midButton{
- 
+
   float: left;
   width: 30%;
   height: 20%;
-  
-
   border-top: 2px solid #000000;
   border-left: 1px solid #000000;
   border-right: 1px solid #000000;
+  border-bottom: 2px solid #000000;
   box-sizing: border-box;
 } 
 .highButton{
+
   float: left;
   width: 30%;
   height: 20%;
-
-
   border-top: 2px solid #000000;
   border-left: 1px solid #000000;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 0px 9px 9px 0px;
 }
 
 .onButton{
+
   width: 86%;
   height: 15%;
   margin-left: 7%;
-
   background: #C4AFF0;
   border: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 6px;
   font-weight: 600;
 }
+
 .iconify.error{
+
   width: 5%;
   height: 5%;
 }
+
+
 .movButtons{
+
   background: #4AB641;
   border-radius: 5px;
   width: 90%;
@@ -133,6 +175,7 @@ h1 {
 }
 
 #diactButton {
+
   width: 70%;
   height: 13%;
   margin-left: 15%;
@@ -144,10 +187,12 @@ h1 {
 }
 
 #foodAuto{
-  font-size: 25px;
+
+  font-size: 15px;
 }
 
 .petButts {
+
   width: 90%;
   height: 13%;
   margin-left: 5%;
@@ -157,4 +202,19 @@ h1 {
   box-sizing: border-box;
   border-radius: 9px;
 }
+.petButts:hover{
+  background-color: #F2F539;
+}
+.tempButs:hover{
+  background-color:#F2F539 ;
+}
 
+#diactButton:hover{
+  background-color: #7348CE;
+}
+.onButton:hover{
+  background-color:#7348CE ;
+}
+.lightButs:hover{
+  background-color: #1BC2C1;
+}
