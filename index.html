@@ -9,9 +9,9 @@
 
 
 <body>
-<div class="container">
-
-  <div class="containerBox">
+  <div class="container">
+  <div class="row">
+    <div class="column">
     <span class="iconify" data-icon="fa6-solid:temperature-three-quarters" style="color: #000000;"></span>
     <h1>Temperature</h1>
     <p><span class="degree">36</span>&#8451</p>
@@ -27,19 +27,10 @@
     <button type="button">high</button><br>
 
     <button type="button">On/Off</button>
-  </div>
+    </div>
 
-  <div class="containerBox">
-    <span class="iconify" data-icon="clarity:eye-solid" style="color: #000000;"></span>
-    <h1>Movement</h1>
-    <p><span id="movCount">2</span> detected</p>
-    <span class="iconify" data-icon="bxs:error-alt" style="color: #F4B556;"></span><button type="button" id="livingButton">Living Room</button><br>
-    <span class="iconify" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button" id="bedroomButton">BedRoom</button><br>
-    <span class="iconify" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button" id="kitchenButton">Kitchen</button><br>
-    <button type="button" id="diactButton">Diactivate</button>
-
-  </div>
-  <div class="containerBox">
+  
+  <div class="column">
     <span class="iconify" data-icon="ri:lightbulb-fill" style="color: #000000;"></span>
     <h1>Lightning</h1>
 
@@ -60,7 +51,22 @@
     <button type="button">On/Off</button>
   </div>
 
-  <div class="containerBox">
+</div>
+  
+
+  <div class="row">
+    <div class="column">
+    <span class="iconify" data-icon="clarity:eye-solid" style="color: #000000;"></span>
+    <h1>Movement</h1>
+    <p><span id="movCount">2</span> detected</p>
+    <span class="iconify" data-icon="bxs:error-alt" style="color: #F4B556;"></span><button type="button" id="livingButton">Living Room</button><br>
+    <span class="iconify" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button" id="bedroomButton">BedRoom</button><br>
+    <span class="iconify" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button" id="kitchenButton">Kitchen</button><br>
+    <button type="button" id="diactButton">Diactivate</button>
+  
+    </div>
+  
+    <div class="column">
     <span class="iconify" data-icon="mdi:dog" style="color: #000000;"></span>
     <h1>Pet Food</h1>
 
@@ -80,9 +86,9 @@
     <button type="button">More</button><br>
     <button type="button">Less</button>
     
-  </div>
+    </div>
 
-  
+  </div>
 
 
 </div>

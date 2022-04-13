@@ -1,21 +1,30 @@
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: rgb(237, 237, 237);
 }
-.container {
-  display: flex;
-  width: 50%;
-  height: 500px;
-  align-items: center; 
-  justify-content: center;
-}
 
-.containerBox { 
-  width: 100%;
-  height: 70%;
-  background: #FFFEEC;
+
+.column {
+  background-color: #FFFEEC;
   border-radius: 25px;
-  margin: 10px;
+  float: left;
+  width: 40%;
+  height: 300px;
+  padding-inline: 20px;
+  padding-block: 10px;
+  margin-block: 10px;
+  margin-inline: 65px;
 }
 
-
+/* Clear floats after the columns */
+.row:after {
+  background-color: #FFFEEC;
+  border-radius: 25px;
+  content: "";
+  display: table;
+  clear: both;
+ 
+}
