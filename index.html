@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -12,8 +11,9 @@
 
 <body>
   <div class="container">
-    <div class="row">
-      <div class="column">
+    <div class="container-rows">
+      <div class="container-rows-products">
+        
         <span class="iconify icon" data-icon="fa6-solid:temperature-three-quarters" style="color: #000000;"></span>
         <h1>Temperature</h1>
         <p id="degree"><span class="degree">36</span>&#8451</p>
@@ -25,19 +25,19 @@
         <output name="tempOut" for="tempTrigger"></output><br><br>
         <button class="lowButton tempButs" type="button"><span class="iconify arrow"
             data-icon="dashicons:arrow-right-alt2"></span></button>
-      <button class=" midButton tempButs" type="button"><span class="iconify arrow"
-              data-icon="dashicons:arrow-right-alt2"></span><span class=" iconify arrow"
-              data-icon="dashicons:arrow-right-alt2"></span></button>
-      <button class=" highButton tempButs" type="button"><span class="iconify arrow"
-                data-icon="dashicons:arrow-right-alt2"></span><span class=" iconify arrow"
-                data-icon="dashicons:arrow-right-alt2"></span><span class=" iconify arrow"
-                data-icon="dashicons:arrow-right-alt2"></span></button>
-      <br><br><br><br>
-      <button class=" onButton" type="button">On/Off</button>
-
+        <button class=" midButton tempButs" type="button"><span class="iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span><span class=" iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span></button>
+        <button class=" highButton tempButs" type="button"><span class="iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span><span class=" iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span><span class=" iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span></button>
+        <br><br><br><br>
+        <button class=" onButton" type="button">On/Off</button>
       </div>
 
-      <div class="column">
+      <div class="container-rows-products">
+        
         <span class="iconify icon" data-icon="ri:lightbulb-fill" style="color: #000000;"></span>
         <h1>Lightning</h1>
         <p id="lum"><span id="lumen">3 </span>lm</p><br><br>
@@ -53,11 +53,15 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="column">
+    <div class="container-row-main">
+      
+    </div>
+
+    <div class="container-rows">
+      <div class="container-rows-products">
         <span class="iconify icon" data-icon="clarity:eye-solid" style="color: #000000;"></span>
-        <h1 >Movement</h1>
-        <span id="movCount">2 detected!</span><br><br><br>
+        <h1>Movement</h1>
+        <span id="movCount">2 detected!</span><br><br>
         <span class="iconify error" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button"
           id="livingButton" class="movButtons">Living Room</button><br>
         <span class="iconify error" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button"
@@ -68,12 +72,12 @@
 
       </div>
 
-      <div class="column">
+      <div class="container-rows-products">
         <span class="iconify icon" data-icon="mdi:dog" style="color: #000000;"></span>
         <h1>Pet Food</h1>
         <span id="foodAmount">%35</span><br><br><br>
         <input type="checkbox" id="petAuto" name="petAuto" value="auto">
-        <label for="petAuto" id="foodAuto"> Make %<select id="makePerc">
+        <label for="petAuto" id="foodAuto"> Make <select id="makePerc">
             <option value="50">50</option>
             <option value="100">100</option>
           </select>, when it is below % <select id="foodPerc">

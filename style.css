@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,7 +7,7 @@
 body {
 
   background-color: rgb(237, 237, 237);
-  font-family: Montserrat;
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,12 +18,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
-@media (max-width: 850px){
+@media (max-width: 1500px){
   .container {
 
     flex-direction: column;
+  }
+  .container-row-main {
+    display: none;
   }
 }
 
@@ -50,7 +55,23 @@ h1 {
   margin-left: 10px;
 }
 
-.column {
+
+.container-row-main {
+  flex: 2;
+  min-width: 600px;
+  background-color: #000000;
+  height:  600px;
+}
+.container-rows {
+  flex: 1;
+  width: 60% ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-rows-products {
 
   min-width: 360px;
   background-color: #FFFEEC;
@@ -62,23 +83,6 @@ h1 {
   padding-block: 10px;
   margin-block: 10px;
   margin-inline: 65px;
-}
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 70%;
-}
-
-
-.row:after {
-
-  background-color: #FFFEEC;
-  border-radius: 25px;
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .triggers{
@@ -110,7 +114,6 @@ h1 {
   border-left: 2px solid #000000;
   border-top:2px solid #000000;
   border-right:1px solid #000000;
-  border-bottom: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 9px 0px 0px 9px;
   margin-left: 5%;
@@ -124,9 +127,9 @@ h1 {
   border-top: 2px solid #000000;
   border-left: 1px solid #000000;
   border-right: 1px solid #000000;
-  border-bottom: 2px solid #000000;
   box-sizing: border-box;
 } 
+
 .highButton{
 
   float: left;
@@ -134,8 +137,6 @@ h1 {
   height: 20%;
   border-top: 2px solid #000000;
   border-left: 1px solid #000000;
-  border-right: 2px solid #000000;
-  border-bottom: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 0px 9px 9px 0px;
 }
@@ -158,7 +159,6 @@ h1 {
   height: 5%;
 }
 
-
 .movButtons{
 
   background: #4AB641;
@@ -169,7 +169,6 @@ h1 {
   font-style: normal;
   font-size: 16px;
   font-weight: 500;
-  font-family: Montserrat;
   line-height: 20px;
   margin-top: 2%;
 }
@@ -188,7 +187,7 @@ h1 {
 
 #foodAuto{
 
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .petButts {
@@ -201,20 +200,4 @@ h1 {
   border: 3px solid #000000;
   box-sizing: border-box;
   border-radius: 9px;
-}
-.petButts:hover{
-  background-color: #F2F539;
-}
-.tempButs:hover{
-  background-color:#F2F539 ;
-}
-
-#diactButton:hover{
-  background-color: #7348CE;
-}
-.onButton:hover{
-  background-color:#7348CE ;
-}
-.lightButs:hover{
-  background-color: #1BC2C1;
 }
