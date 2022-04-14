@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
   <link rel="stylesheet" href="style.css">
-</head>
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
 
 
 <body>
@@ -16,8 +19,8 @@
 
         <span class="iconify icon" data-icon="fa6-solid:temperature-three-quarters" style="color: #000000;"></span>
         <h1>Temperature</h1>
-        <p id="degree"><span class="degree">36</span>&#8451</p>
-        <span class="iconify" id="fan" data-icon="wpf:fan" style="color: #00FF38;"></span><br><br>
+        <p id="degree"><span class="degree">36</span> °C</p>
+        <span class="iconify" id="fan" data-icon="wpf:fan" style="color: rgb(14, 14, 14);"></span><br><br>
         <input type="checkbox" id="tempAuto" name="tempAuto" value="auto">
         <label for="tempAuto"> Auto</label><br><br>
         <label class="triggers" for="tempTrigger"> Set Trigger: </label>
@@ -53,8 +56,27 @@
     </div>
 
     <div class="container-row-main">
-
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
     </div>
+    
 
     <div class="container-rows">
       <div class="container-rows-products">
@@ -89,6 +111,9 @@
       </div>
     </div>
   </div>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
