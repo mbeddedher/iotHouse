@@ -6,7 +6,9 @@
 
 body {
 
-  background-color: rgb(237, 237, 237);
+  background-image: url(/src/r-architecture-2gDwlIim3Uw-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
@@ -64,7 +66,7 @@ h1 {
 
   flex: 2;
   min-width: 600px;
-  background-color: #000000;
+  background: #111111d0;
   height: 600px;
 }
 
@@ -81,7 +83,8 @@ h1 {
 .container-rows-products {
 
   min-width: 360px;
-  background-color: #FFFEEC;
+  background: #979797d0;
+  color: black;
   border-radius: 25px;
   width: 80%;
   height: 300px;
