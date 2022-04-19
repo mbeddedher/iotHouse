@@ -19,39 +19,64 @@
 
         <span class="iconify icon" data-icon="fa6-solid:temperature-three-quarters" style="color: #000000;"></span>
         <h1>Temperature</h1>
-        <p id="degree"><span class="degree">36</span> °C</p>
-        <span class="iconify" id="fan" data-icon="wpf:fan" style="color: rgb(14, 14, 14);"></span><br><br>
-        <input type="checkbox" id="tempAuto" name="tempAuto" value="auto">
+        <p id="degree" name="blink"><span class="degree">36</span> °C</p>
+        <span class="iconify" id="fan" data-icon="wpf:fan" style="color: rgb(59, 236, 83);"></span><br><br>
+        <input type="checkbox" id="tempAuto" name="tempAuto"  value="auto"/>
         <label for="tempAuto"> Auto</label><br><br>
         <label class="triggers" for="tempTrigger"> Set Trigger: </label>
-        <input type="range" id="tempTrigger" name="tempTrigger" value="4">
+        <input type="range" id="tempTrigger"  disabled value="4" />
         <output name="tempOut" for="tempTrigger"></output><br><br>
-        <button class="lowButton tempButs" type="button"><span class="iconify arrow"
-            data-icon="dashicons:arrow-right-alt2"></span></button>
-        <button class=" midButton tempButs" type="button"><span class="iconify arrow"
-            data-icon="dashicons:arrow-right-alt2"></span><span class=" iconify arrow"
-            data-icon="dashicons:arrow-right-alt2"></span></button>
-        <button class=" highButton tempButs" type="button"><span class="iconify arrow"
-            data-icon="dashicons:arrow-right-alt2"></span><span class=" iconify arrow"
-            data-icon="dashicons:arrow-right-alt2"></span><span class=" iconify arrow"
-            data-icon="dashicons:arrow-right-alt2"></span></button>
-        <button class=" onButton" type="button">On / Off</button>
+
+        <label class="label-checkbox1 lowButton">
+          <input type="checkbox" name="checkTemp" onclick="onlyOne2(this)" />
+          <span><span class="iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span></span>
+        </label>
+
+        <label class="label-checkbox2 lowButton">
+          <input type="checkbox" name="checkTemp" onclick="onlyOne2(this)"/>
+          <span><span class="iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span><span class="iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span></span>
+        </label>
+
+        <label class="label-checkbox3 lowButton">
+          <input type="checkbox"  name="checkTemp" onclick="onlyOne2(this)" />
+          <span><span class="iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span><span class="iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span><span class="iconify arrow"
+            data-icon="dashicons:arrow-right-alt2"></span></span>
+        </label>
+
+        <button class=" onButton" type="button" id="fanOn" onclick="showImage(fan.id)">I / O</button>
       </div>
 
       <div class="container-rows-products">
 
         <span class="iconify icon" data-icon="ri:lightbulb-fill" style="color: #000000;"></span>
         <h1>Lightning</h1>
-        <p id="lum"><span id="lumen">3 </span>lm</p><br><br>
+        <p id="lum" name="blink"><span id="lumen">3 </span>lm</p>
+        <span class="iconify icon" id="lightsOn" data-icon="majesticons:lightbulb-shine" "></span><br><br>
         <input type="checkbox" id="lightAuto" name="lightAuto" value="auto">
         <label for="lightAuto"> Auto</label><br><br>
         <label class="triggers" for="lightTrigger"> Set Trigger: </label>
-        <input type="range" id="lightTrigger" name="lightTrigger" value="4">
+        <input type="range" id="lightTrigger" name="lightTrigger" disabled value="4">
         <output name="lightOut" for="lightTrigger"></output><br><br>
-        <button class="lowButton lightButs" type="button">Low</button>
-        <button class="midButton lightButs" type="button">Mid</button>
-        <button class="highButton lightButs" type="button">High</button>
-        <button class="onButton" type="button">On / Off</button>
+        <label class="label-checkbox1 lowButton">
+          <input type="checkbox" name="checkLight" onclick="onlyOne(this)"/>
+          <span>Low</span>
+        </label>
+
+        <label class="label-checkbox2 lowButton">
+          <input type="checkbox" name="checkLight" onclick="onlyOne(this)"/>
+          <span>Mid</span>
+        </label>
+
+        <label class="label-checkbox3 lowButton">
+          <input type="checkbox" name="checkLight" onclick="onlyOne(this)"/>
+          <span>High</span>
+        </label>
+        <button class="onButton" type="button" id="lightOnButton" onclick="showImage(lightsOn.id)">I / O</button>
       </div>
     </div>
 
@@ -82,20 +107,20 @@
       <div class="container-rows-products">
         <span class="iconify icon" data-icon="clarity:eye-solid" style="color: #000000;"></span>
         <h1>Movement</h1>
-        <span id="movCount">2 detected!</span><br><br>
-        <span class="iconify error" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button"
-          id="livingButton" class="movButtons">Living Room</button><br>
-        <span class="iconify error" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button"
-          id="bedroomButton" class="movButtons">BedRoom</button><br>
-        <span class="iconify error" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button"
-          id="kitchenButton" class="movButtons">Kitchen</button><br>
-        <button type="button" id="diactButton">Diactivate</button>
+        <span id="movCount" name="blink">2 detected!</span><br><br>
+        <span class="iconify error" name="errorIcon" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button"
+          id="livingButton" class="movButtons" name="movButtons">Living Room</button><br>
+        <span class="iconify error" name="errorIcon" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button"
+          id="bedroomButton" class="movButtons" name="movButtons">BedRoom</button><br>
+        <span class="iconify error" name="errorIcon" data-icon="bxs:error-alt" style="color: #F4B556;"></span> <button type="button"
+          id="kitchenButton" class="movButtons" name="movButtons" >Kitchen</button><br>
+        <button type="button" id="diactButton" onclick="Activate()">Diactivate</button>
       </div>
 
       <div class="container-rows-products">
         <span class="iconify icon" data-icon="mdi:dog" style="color: #000000;"></span>
         <h1>Pet Food</h1>
-        <span id="foodAmount">%35</span><br><br><br>
+        <span name="blink" id="foodAmount">%35</span><br><br><br>
         <input type="checkbox" id="petAuto" name="petAuto" value="auto">
         <label for="petAuto" id="foodAuto"> Make <select id="makePerc">
             <option value="50">50</option>
@@ -105,8 +130,8 @@
             <option value="100">100</option>
           </select>
         </label><br><br><br>
-        <button type="button" class="petButts">More</button><br>
-        <button type="button" class="petButts">Less</button>
+        <button type="button" name="petButton" class="petButts">More</button><br>
+        <button type="button" name="petButton" class="petButts">Less</button>
 
       </div>
     </div>
