@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -5,8 +6,10 @@
 
 body {
 
-  background-color: rgb(237, 237, 237);
-  font-family: Montserrat;
+  background-image: url(/src/r-architecture-2gDwlIim3Uw-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,43 +20,86 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
-@media (max-width: 850px){
+@media (max-width: 1500px) {
   .container {
 
     flex-direction: column;
   }
+
+  .container-row-main {
+    display: none;
+  }
 }
 
 h1 {
-
-  font-size: 25px;
+  font-family: Montserrat;
+  font-size: 23px;
   display: inline;
   padding-left: 5px;
 }
 
-.iconify.icon{
+
+.iconify.icon {
 
   width: 27px;
   height: 27px;
   margin-top: 10px;
 }
-#fan{
 
-  margin-left: 7px;
+#fan {
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+}
+#lightsOn{
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  color: #ece57f;
 }
 
-#degree, #movCount, #lum {
-
+#degree,
+#movCount,
+#lum,
+#foodAmount {
+  font-size: 17px;
+  font-weight: 600;
   display: inline;
   margin-left: 10px;
 }
 
-.column {
+.container-row-main {
+
+  flex: 2;
+  min-width: 600px;
+  background: #525151d0;
+  color: black;
+  height: 600px;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.container-rows {
+
+  flex: 1;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-rows-products {
 
   min-width: 360px;
-  background-color: #FFFEEC;
+  background: #9e9e9ebb;
+  color: black;
   border-radius: 25px;
   width: 80%;
   height: 300px;
@@ -63,116 +109,166 @@ h1 {
   margin-block: 10px;
   margin-inline: 65px;
 }
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 70%;
+button {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+button:enabled:active{
+  top: 2px;
+  left: 1px;
+  box-shadow: none;   
 }
 
 
-.row:after {
 
-  background-color: #FFFEEC;
-  border-radius: 25px;
-  content: "";
-  display: table;
-  clear: both;
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
 
-.triggers{
 
+
+
+
+
+
+.onButton {
+  margin-top: 20px;
+}
+
+.triggers {
+  font-size: 18px;
+  font-weight: bold;
   margin-left: 7%;
 }
 
-.lightButs{
+.lightButs {
 
-  background-color: #64D7D6;
-  font-size: 17px;
-}
-.tempButs{
-
-  background-color: #FCFF76;
+  font-size: 1.2rem;
+  background: #3a3939e8;
+  color: rgb(248, 246, 246);
 }
 
-.iconify.arrow{
+/* .tempButs {
+
+  background: #3a3939e8;
+  color: rgb(248, 246, 246);
+} */
+
+.iconify.arrow {
 
   width: 27px;
   height: 27px;
 }
 
-.lowButton{ 
+.iconify.iconify--dashicons.arrow {
 
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+/* .lowButton {
+
+  background: #222222e8;
   float: left;
   width: 30%;
   height: 20%;
   border-left: 2px solid #000000;
-  border-top:2px solid #000000;
-  border-right:1px solid #000000;
-  border-bottom: 2px solid #000000;
+  border-top: 2px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 2px solid black;
   box-sizing: border-box;
   border-radius: 9px 0px 0px 9px;
   margin-left: 5%;
-}
+  font-size: 14px;
+  font-weight: 530;
+} */
+/*  .lowButton:hover{
+  background: #3a3a3ae8;
 
-.midButton{
+ } */
 
+/* .midButton {
+  background: #3a3939e8;
   float: left;
   width: 30%;
   height: 20%;
   border-top: 2px solid #000000;
   border-left: 1px solid #000000;
   border-right: 1px solid #000000;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid black;
   box-sizing: border-box;
-} 
-.highButton{
+  font-size: 14px;
+  font-weight: 530;
+}
 
+.midButton:hover{
+  background: #4e4d4de8;
+
+}
+  */
+
+/* .highButton {
+
+  background: #555454e8;
   float: left;
   width: 30%;
   height: 20%;
   border-top: 2px solid #000000;
   border-left: 1px solid #000000;
+  border-bottom: 2px solid black;
   border-right: 2px solid #000000;
-  border-bottom: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 0px 9px 9px 0px;
+  font-size: 14px;
+  font-weight: 530;
 }
 
-.onButton{
+.highButton:hover{
+  background: #777676e8;
+} 
+ */
+.onButton {
 
   width: 86%;
   height: 15%;
   margin-left: 7%;
-  background: #C4AFF0;
-  border: 2px solid #000000;
+  background: #c5c5c5bb;
+  color: #222222e8;
+  font-size: 1rem;
+  font-weight: 570;
+  border: 2px solid #222222e8;
   box-sizing: border-box;
   border-radius: 6px;
-  font-weight: 600;
+  display: block;
 }
 
-.iconify.error{
+.onButton:hover{
+  background-color: #222222e8;
+  color: rgb(255, 255, 255);}
+
+
+.iconify.error {
 
   width: 5%;
   height: 5%;
 }
 
+.movButtons {
 
-.movButtons{
-
-  background: #4AB641;
+  background: #0808083f;
+  color: rgb(17, 17, 17);
   border-radius: 5px;
   width: 90%;
   height: 10%;
   border: none;
-  font-style: normal;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
-  font-family: Montserrat;
   line-height: 20px;
   margin-top: 2%;
 }
+
 
 #diactButton {
 
@@ -180,16 +276,24 @@ h1 {
   height: 13%;
   margin-left: 15%;
   margin-top: 7%;
-  background: #C4AFF0;
-  border: 2px solid #000000;
+  background: #c5c5c5bb;
+  color: #222222e8;
+  font-size: 1rem;
+  font-weight: 570;
+  border: 3px solid #222222e8;
   box-sizing: border-box;
   border-radius: 5px;
 }
+#diactButton:hover {
+  background-color: #222222e8;
+  color: rgb(255, 255, 255);}
 
-#foodAuto{
+#foodAuto {
 
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 600;
 }
+  
 
 .petButts {
 
@@ -197,24 +301,104 @@ h1 {
   height: 13%;
   margin-left: 5%;
   margin-top: 2%;
-  background: #FCFF76;
-  border: 3px solid #000000;
+  background: #c5c5c5bb;
+  color: #222222e8;
+  border: 2px solid #222222e8;
+  font-size: 1rem;
   box-sizing: border-box;
-  border-radius: 9px;
-}
-.petButts:hover{
-  background-color: #F2F539;
-}
-.tempButs:hover{
-  background-color:#F2F539 ;
+  border-radius: 5px;
+  font-weight: 550;
 }
 
-#diactButton:hover{
-  background-color: #7348CE;
-}
-.onButton:hover{
-  background-color:#7348CE ;
-}
-.lightButs:hover{
-  background-color: #1BC2C1;
-}
+.petButts:hover {
+  background-color: #222222e8;
+  color: rgb(255, 255, 255);}
+
+
+
+  
+  label.label-checkbox1 {
+    cursor: pointer;
+  }
+  
+  
+  label.label-checkbox1 input {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  label.label-checkbox1 span {
+    float: left;
+    width: 25%;
+    height: 15%;
+    border: 1px solid #ccc;
+    color: #202020;
+    border-radius: 6px;
+    background: #f5f5f5;
+    user-select: none;
+    margin-left: 25px;
+  }
+  
+  label.label-checkbox1 input:checked + span {
+    box-shadow: inset 1px 2px 5px #777;
+    transform: translateY(1px);
+    background: #e5e5e5;
+  }
+
+  label.label-checkbox2 {
+    cursor: pointer;
+  }
+  
+  
+  label.label-checkbox2 input {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  label.label-checkbox2 span {
+    float: left;
+    width: 25%;
+    height: 15%;
+    border: 1px solid #ccc;
+    color: #202020;
+    border-radius: 6px;
+    background: #f5f5f5;
+    user-select: none;
+
+  }
+  
+  label.label-checkbox2 input:checked + span {
+    box-shadow: inset 1px 2px 5px #777;
+    transform: translateY(1px);
+    background: #e5e5e5;
+  }
+
+
+
+  label.label-checkbox3 {
+    cursor: pointer;
+  }
+  
+  
+  label.label-checkbox3 input {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  label.label-checkbox3 span {
+    float:left;
+    width: 25%;
+    height: 15%;
+    border: 1px solid #ccc;
+    color: #202020;
+    border-radius: 6px; 
+    background: #f5f5f5;
+    user-select: none;
+   
+  }
+  
+  label.label-checkbox3 input:checked + span {
+    box-shadow: inset 1px 2px 5px #777;
+    transform: translateY(1px);
+    background: #e5e5e5;
+  }
